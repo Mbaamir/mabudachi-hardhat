@@ -82,12 +82,12 @@ contract MbaToken is ERC721AQueryable, Ownable {
             msg.value == (whitelistMintPrice * _quantity),
             "Incorrect Price"
         );
-        uint64 whiteListedByWallet = _getAux(msg.sender);
+        uint64 whitelistedClaimed = _getAux(msg.sender);
         require(
-            (whiteListedByWallet + _quantity) < whitelistLimitPerWallet,
+            (whitelistedClaimed + _quantity) < whitelistLimitPerWallet,
             "Qty > Whitelist Limit/Addr"
         );
-        _setAux(msg.sender, whiteListedByWallet + _quantity);
+        _setAux(msg.sender, whitelistedClaimed + _quantity);
         mint(msg.sender, _quantity);
     }
 
@@ -100,7 +100,7 @@ contract MbaToken is ERC721AQueryable, Ownable {
     function ownerMint(uint256 quantity) external onlyOwner {
         mint(msg.sender, quantity);
     }
-
+    
     function mint(address mintTo, uint256 quantity) private {
         require(
             (_totalMinted() + quantity) <= MAX_MINTS_AVAILABLE,
