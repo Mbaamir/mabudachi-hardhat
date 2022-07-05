@@ -1,6 +1,6 @@
 {
   "name": "mabudachi-contract",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "description": "Mabudachi. Best Friends",
   "main": "index.js",
   "scripts": {
