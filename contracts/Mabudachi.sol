@@ -6,10 +6,10 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 
-contract MbaToken is ERC721AQueryable, Ownable {
+contract Mabudachi is ERC721AQueryable, Ownable {
     using ECDSA for bytes32;
 
-    constructor() ERC721A("Test-MBA", "tMBA") {}
+    constructor() ERC721A("MABUDACHI", "MAB") {}
 
     uint256 public constant MAX_MINTS_AVAILABLE = 500;
     uint256 public overallLimitPerWallet = 30;
