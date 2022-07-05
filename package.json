@@ -1,7 +1,7 @@
 {
-  "name": "mba-hardhat-ts-721a",
-  "version": "1.0.0",
-  "description": "A 721A project on hardhat in TS",
+  "name": "mabudachi-contract",
+  "version": "1.1.0",
+  "description": "Mabudachi. Best Friends",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
